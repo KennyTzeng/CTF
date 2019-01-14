@@ -1,0 +1,75 @@
+---database---
+blog, information_schema, mysql, performance_schema, sys
+
+
+---table---
+---
+tables of mysql
+columns_priv, db, engine_cost, event, func, general_log, gtid_executed, help_category, help_keyword, help_relation, help_topic, innodb_index_stats, innodb_table_stats, ndb_binlog_index, plugin, proc, procs_priv, proxies_priv, server_cost, servers, slave_master_info, slave_relay_log_info, slave_worker_info, slow_log, tables_priv, time_zone, time_zone_leap_second, time_zone_name, time_zone_transition, time_zone_transition_type, user
+---
+tables of sys
+host_summary, host_summary_by_file_io, host_summary_by_file_io_type, host_summary_by_stages, host_summary_by_statement_latency, host_summary_by_statement_type, innodb_buffer_stats_by_schema, innodb_buffer_stats_by_table, innodb_lock_waits, io_by_thread_by_latency, io_global_by_file_by_bytes, io_global_by_file_by_latency, io_global_by_wait_by_bytes, io_global_by_wait_by_latency, latest_file_io, memory_by_host_by_current_bytes, memory_by_thread_by_current_bytes, memory_by_user_by_current_bytes, memory_global_by_current_bytes, memory_global_total, metrics, processlist, ps_check_lost_instrumentation, schema_auto_increment_columns, schema_index_statistics, schema_object_overview, schema_redundant_indexes, schema_table_lock_waits, schema_table_statistics, schema_table_statistics_with_buffer, schema_tables_with_full_table_scans, schema_unused_indexes, session, session_ssl_status, statement_analysis, statements_with_errors_or_warnings, statements_with_full_table_scans, statements_with_runtimes_in_95th_percentile, statements_with_sorting, statements_with_temp_tables, sys_config, user_summary, user_summary_by_file_io, user_summary_by_file_io_type, user_summary_by_stages, user_summary_by_statement_latency, user_summary_by_statement_type, version, wait_classes_global_by_avg_latency, wait_classes_global_by_latency, waits_by_host_by_latency, waits_by_user_by_latency, waits_global_by_latency, x$host_summary, x$host_summary_by_file_io, x$host_summary_by_file_io_type, x$host_summary_by_stages, x$host_summary_by_statement_latency, x$host_summary_by_statement_type, x$innodb_buffer_stats_by_schema, x$innodb_buffer_stats_by_table, x$innodb_lock_waits, x$io_by_thread_by_latency, x$io_global_by_file_by_bytes, x$io_global_by_file_by_latency, x$io_global_by_wait_by_bytes, x$io_global_by_wait_by_latency, x$latest_file_io, x$memory_by_host_by_current_bytes, x$memory_by_thread_by_current_bytes, x$memory_by_user_by_current_bytes, x$memory_global_by_current_bytes, x$memory_global_total, x$processlist, x$ps_digest_95th_percentile_by_avg_us, x$ps_digest_avg_latency_distribution, x$ps_schema_table_statistics_io, x$schema_flattened_keys, x$schema_index_statistics, x$schema_table_lock_waits, x$schema_table_statistics, x$schema_table_statistics_with_buffer, x$schema_tables_with_full_table_scans, x$session, x$statement_analysis, x$statements_with_errors_or_warnings, x$statements_with_full_table_scans, x$statements_with_runtimes_in_95th_percentile, x$statements_with_sorting, x$statements_with_temp_tables, x$user_summary, x$user_summary_by_file_io, x$user_summary_by_file_io_type, x$user_summary_by_stages, x$user_summary_by_statement_latency, x$user_summary_by_statement_type, x$wait_classes_global_by_avg_latency, x$wait_classes_global_by_latency, x$waits_by_host_by_latency, x$waits_by_user_by_latency, x$waits_global_by_latency
+---
+tables of information_schema
+character_sets, collations, collation_character_set_applicability, columns, column_privileges, engines, events, files, global_status, global_variables, key_column_usage, optimizer_trace, parameters, partitions, plugins, processlist, profiling, referential_constraints, routines, schemata, schema_privileges, session_status, session_variables, statistics, tables, tablespaces, table_constraints, table_privileges, triggers, user_privileges,  views, innodb_locks, innodb_trx, innodb_sys_datafiles, innodb_ft_config, innodb_sys_virtual, innodb_cmp, innodb_ft_being_deleted, innodb_cmp_reset, innodb_cmp_per_index, innodb_cmpmem_reset, innodb_ft_deleted, innodb_buffer_page_lru, innodb_lock_waits, innodb_temp_table_info, innodb_sys_indexes, innodb_sys_tables, innodb_sys_fields, innodb_cmp_per_index_reset, innodb_buffer_page, innodb_ft_default_stopword, innodb_ft_index_table, innodb_ft_index_cache, innodb_sys_tablespaces, innodb_metrics, innodb_sys_foreign_cols, innodb_cmpmem, innodb_buffer_pool_stats, innodb_sys_columns, innodb_sys_foreign, innodb_sys_tablestats
+---column---
+---
+columns of mysql.user
+host, user, select_priv, insert_priv, update_priv, delete_priv, create_priv, drop_priv, reload_priv, shutdown_priv, process_priv, file_priv, grant_priv, references_priv, index_priv, alter_priv, show_db_priv, super_priv, create_tmp_table_priv, lock_tables_priv, execute_priv, repl_slave_priv, repl_client_priv, create_view_priv, show_view_priv, create_routine_priv, alter_routine_priv, create_user_priv, event_priv, trigger_priv, create_tablespace_priv, ssl_type, ssl_cipher, x509_issuer, x509_subject, max_questions, max_updates, max_connections, max_user_connections, plugin, authentication_string, password_expired, password_last_changed, password_lifetime, account_locked
+---
+columns of sys.sys_config
+variable, value, set_time, set_by
+---
+columns of information_schema.global_variables
+ variable_name, variable_value, variable_name, variable_value
+---
+columns of blog.photos
+id, user_id, password, title, desc, name, heart, created_at
+---
+columns of blog.users
+id, username, password, user, current_connections, total_connections
+---
+---value---
+---
+host of mysql.user
+%, localhost, localhost, localhost
+---
+user of mysql.user
+root, mysql.session, mysql.sys, root
+---
+authentication_string of mysql.user
+*1F76C4E45EC4D81429AEF21A224DBDFC674A4D5C, *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE, *THISISNOTAVALIDPASSWORDTHATCANBEUSEDHERE, *1F76C4E45EC4D81429AEF21A224DBDFC674A4D5C
+---
+variable of sys.sys_config
+diagnostics.allow_i_s_tables, diagnostics.include_raw, ps_thread_trx_info.max_length, statement_performance_analyzer.limit, statement_performance_analyzer.view, statement_truncate_len
+---
+value of sys.sys_config
+off, off, 65535, 100, , 64, , , , , , , , , , , ,
+---
+
+--------------------------------------------------------------------------------------------------------------------------
+|                                                      blog.photos                                                       |
+--------------------------------------------------------------------------------------------------------------------------
+| id | user_id |             password             | title | desc |               name               | heart | created_at |
+--------------------------------------------------------------------------------------------------------------------------
+|  1 |    3    |                                  |       |      | 3403c3303cb9e7041b8ec56ba5698b1d |  132  | 2018-12-01 |
+|  2 |    3    | 5047dbcef7077a704f010d2b0974e4c8 |       |      | e3c62a842dfe689fc2d31da1f0db041a |  110  | 2018-12-03 |
+|  3 |    3    | 43739f1e36841fe166f4933889f01d0c |       |      | ad0d810f794aef7c3a66b86d1dd733f8 |   99  | 2018-12-07 |
+|  4 |    3    | 6b4e60ebbb3fceed8dc9cc368a715019 |       |      | 2ba1bc92da751c3e63bb0a4161c6b32f |   38  | 2018-12-09 |
+|  5 |    3    | 04bc549ff6141507c3323312db6d7157 |       |      | 889e40d0ae4ca62e68523d1f4436372d |   21  | 2018-12-10 |
+|  6 |    3    | 0e087386482136013740957780965295 |       |      | 8f6e732516e72e2a131e4c910643db4b |   45  | 2018-12-15 |
+|  7 |    3    | 5047dbcef7077a704f010d2b0974e4c8 |       |      | c71ab89a5da75d8323822ef616214e97 |   87  | 2018-12-19 |
+|  8 |    3    | 00471a1a6273dcc2195326f5b929418c |       |      | bc2691e65d984cbb261edf6decd5697e |   66  | 2018-12-21 |
+|  9 |    3    | 73d5b248bbec299b1f61531ac19eaeff |       |      | 638d7134d7ccf407ae43572675ec96fd |   39  | 2018-12-23 |
+| 10 |    3    |                                  |       |      | ee4c28f7bbdcd5e5a7e611db0182c3fd |   79  | 2018-12-25 |
+--------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------
+|                         blog.users                       |
+------------------------------------------------------------
+| id | username |                 password                 |
+------------------------------------------------------------
+|  1 |    admin | 5139a0402adfdbaf217eef253f89945228a1f758 |
+|  2 |    guest | 35675e68f4b5af7b995d9205ad0fc43842f16450 |
+|  3 |     nyan | 9c4084d17b524ca42fd4da8bfe5453b2717088e2 |
+------------------------------------------------------------

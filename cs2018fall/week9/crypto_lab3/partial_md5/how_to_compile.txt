@@ -1,0 +1,1 @@
+gcc partial_md5.c -o partial_md5 -lcrypto -lssl

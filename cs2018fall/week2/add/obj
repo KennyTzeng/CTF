@@ -1,0 +1,437 @@
+
+add:     file format elf64-x86-64
+
+
+Disassembly of section .init:
+
+0000000000400778 <_init>:
+  400778:	48 83 ec 08          	sub    rsp,0x8
+  40077c:	48 8b 05 75 18 20 00 	mov    rax,QWORD PTR [rip+0x201875]        # 601ff8 <_DYNAMIC+0x200>
+  400783:	48 85 c0             	test   rax,rax
+  400786:	74 05                	je     40078d <_init+0x15>
+  400788:	e8 23 00 00 00       	call   4007b0 <__gmon_start__@plt>
+  40078d:	48 83 c4 08          	add    rsp,0x8
+  400791:	c3                   	ret    
+
+Disassembly of section .plt:
+
+00000000004007a0 <__gmon_start__@plt-0x10>:
+  4007a0:	ff 35 62 18 20 00    	push   QWORD PTR [rip+0x201862]        # 602008 <_GLOBAL_OFFSET_TABLE_+0x8>
+  4007a6:	ff 25 64 18 20 00    	jmp    QWORD PTR [rip+0x201864]        # 602010 <_GLOBAL_OFFSET_TABLE_+0x10>
+  4007ac:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+
+00000000004007b0 <__gmon_start__@plt>:
+  4007b0:	ff 25 62 18 20 00    	jmp    QWORD PTR [rip+0x201862]        # 602018 <_GLOBAL_OFFSET_TABLE_+0x18>
+  4007b6:	68 00 00 00 00       	push   0x0
+  4007bb:	e9 e0 ff ff ff       	jmp    4007a0 <_init+0x28>
+
+00000000004007c0 <puts@plt>:
+  4007c0:	ff 25 5a 18 20 00    	jmp    QWORD PTR [rip+0x20185a]        # 602020 <_GLOBAL_OFFSET_TABLE_+0x20>
+  4007c6:	68 01 00 00 00       	push   0x1
+  4007cb:	e9 d0 ff ff ff       	jmp    4007a0 <_init+0x28>
+
+00000000004007d0 <putchar@plt>:
+  4007d0:	ff 25 52 18 20 00    	jmp    QWORD PTR [rip+0x201852]        # 602028 <_GLOBAL_OFFSET_TABLE_+0x28>
+  4007d6:	68 02 00 00 00       	push   0x2
+  4007db:	e9 c0 ff ff ff       	jmp    4007a0 <_init+0x28>
+
+00000000004007e0 <_ZNSt8ios_base4InitC1Ev@plt>:
+  4007e0:	ff 25 4a 18 20 00    	jmp    QWORD PTR [rip+0x20184a]        # 602030 <_GLOBAL_OFFSET_TABLE_+0x30>
+  4007e6:	68 03 00 00 00       	push   0x3
+  4007eb:	e9 b0 ff ff ff       	jmp    4007a0 <_init+0x28>
+
+00000000004007f0 <malloc@plt>:
+  4007f0:	ff 25 42 18 20 00    	jmp    QWORD PTR [rip+0x201842]        # 602038 <_GLOBAL_OFFSET_TABLE_+0x38>
+  4007f6:	68 04 00 00 00       	push   0x4
+  4007fb:	e9 a0 ff ff ff       	jmp    4007a0 <_init+0x28>
+
+0000000000400800 <__libc_start_main@plt>:
+  400800:	ff 25 3a 18 20 00    	jmp    QWORD PTR [rip+0x20183a]        # 602040 <_GLOBAL_OFFSET_TABLE_+0x40>
+  400806:	68 05 00 00 00       	push   0x5
+  40080b:	e9 90 ff ff ff       	jmp    4007a0 <_init+0x28>
+
+0000000000400810 <__cxa_atexit@plt>:
+  400810:	ff 25 32 18 20 00    	jmp    QWORD PTR [rip+0x201832]        # 602048 <_GLOBAL_OFFSET_TABLE_+0x48>
+  400816:	68 06 00 00 00       	push   0x6
+  40081b:	e9 80 ff ff ff       	jmp    4007a0 <_init+0x28>
+
+0000000000400820 <_ZNSt8ios_base4InitD1Ev@plt>:
+  400820:	ff 25 2a 18 20 00    	jmp    QWORD PTR [rip+0x20182a]        # 602050 <_GLOBAL_OFFSET_TABLE_+0x50>
+  400826:	68 07 00 00 00       	push   0x7
+  40082b:	e9 70 ff ff ff       	jmp    4007a0 <_init+0x28>
+
+0000000000400830 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>:
+  400830:	ff 25 22 18 20 00    	jmp    QWORD PTR [rip+0x201822]        # 602058 <_GLOBAL_OFFSET_TABLE_+0x58>
+  400836:	68 08 00 00 00       	push   0x8
+  40083b:	e9 60 ff ff ff       	jmp    4007a0 <_init+0x28>
+
+0000000000400840 <free@plt>:
+  400840:	ff 25 1a 18 20 00    	jmp    QWORD PTR [rip+0x20181a]        # 602060 <_GLOBAL_OFFSET_TABLE_+0x60>
+  400846:	68 09 00 00 00       	push   0x9
+  40084b:	e9 50 ff ff ff       	jmp    4007a0 <_init+0x28>
+
+0000000000400850 <_ZNSirsERi@plt>:
+  400850:	ff 25 12 18 20 00    	jmp    QWORD PTR [rip+0x201812]        # 602068 <_GLOBAL_OFFSET_TABLE_+0x68>
+  400856:	68 0a 00 00 00       	push   0xa
+  40085b:	e9 40 ff ff ff       	jmp    4007a0 <_init+0x28>
+
+Disassembly of section .text:
+
+0000000000400860 <_start>:
+  400860:	31 ed                	xor    ebp,ebp
+  400862:	49 89 d1             	mov    r9,rdx
+  400865:	5e                   	pop    rsi
+  400866:	48 89 e2             	mov    rdx,rsp
+  400869:	48 83 e4 f0          	and    rsp,0xfffffffffffffff0
+  40086d:	50                   	push   rax
+  40086e:	54                   	push   rsp
+  40086f:	49 c7 c0 b0 0c 40 00 	mov    r8,0x400cb0
+  400876:	48 c7 c1 40 0c 40 00 	mov    rcx,0x400c40
+  40087d:	48 c7 c7 1e 0b 40 00 	mov    rdi,0x400b1e
+  400884:	e8 77 ff ff ff       	call   400800 <__libc_start_main@plt>
+  400889:	f4                   	hlt    
+  40088a:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+
+0000000000400890 <deregister_tm_clones>:
+  400890:	b8 7f 20 60 00       	mov    eax,0x60207f
+  400895:	55                   	push   rbp
+  400896:	48 2d 78 20 60 00    	sub    rax,0x602078
+  40089c:	48 83 f8 0e          	cmp    rax,0xe
+  4008a0:	48 89 e5             	mov    rbp,rsp
+  4008a3:	77 02                	ja     4008a7 <deregister_tm_clones+0x17>
+  4008a5:	5d                   	pop    rbp
+  4008a6:	c3                   	ret    
+  4008a7:	b8 00 00 00 00       	mov    eax,0x0
+  4008ac:	48 85 c0             	test   rax,rax
+  4008af:	74 f4                	je     4008a5 <deregister_tm_clones+0x15>
+  4008b1:	5d                   	pop    rbp
+  4008b2:	bf 78 20 60 00       	mov    edi,0x602078
+  4008b7:	ff e0                	jmp    rax
+  4008b9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+
+00000000004008c0 <register_tm_clones>:
+  4008c0:	b8 78 20 60 00       	mov    eax,0x602078
+  4008c5:	55                   	push   rbp
+  4008c6:	48 2d 78 20 60 00    	sub    rax,0x602078
+  4008cc:	48 c1 f8 03          	sar    rax,0x3
+  4008d0:	48 89 e5             	mov    rbp,rsp
+  4008d3:	48 89 c2             	mov    rdx,rax
+  4008d6:	48 c1 ea 3f          	shr    rdx,0x3f
+  4008da:	48 01 d0             	add    rax,rdx
+  4008dd:	48 d1 f8             	sar    rax,1
+  4008e0:	75 02                	jne    4008e4 <register_tm_clones+0x24>
+  4008e2:	5d                   	pop    rbp
+  4008e3:	c3                   	ret    
+  4008e4:	ba 00 00 00 00       	mov    edx,0x0
+  4008e9:	48 85 d2             	test   rdx,rdx
+  4008ec:	74 f4                	je     4008e2 <register_tm_clones+0x22>
+  4008ee:	5d                   	pop    rbp
+  4008ef:	48 89 c6             	mov    rsi,rax
+  4008f2:	bf 78 20 60 00       	mov    edi,0x602078
+  4008f7:	ff e2                	jmp    rdx
+  4008f9:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+
+0000000000400900 <__do_global_dtors_aux>:
+  400900:	80 3d a9 19 20 00 00 	cmp    BYTE PTR [rip+0x2019a9],0x0        # 6022b0 <completed.6345>
+  400907:	75 11                	jne    40091a <__do_global_dtors_aux+0x1a>
+  400909:	55                   	push   rbp
+  40090a:	48 89 e5             	mov    rbp,rsp
+  40090d:	e8 7e ff ff ff       	call   400890 <deregister_tm_clones>
+  400912:	5d                   	pop    rbp
+  400913:	c6 05 96 19 20 00 01 	mov    BYTE PTR [rip+0x201996],0x1        # 6022b0 <completed.6345>
+  40091a:	f3 c3                	repz ret 
+  40091c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+
+0000000000400920 <frame_dummy>:
+  400920:	48 83 3d c8 14 20 00 	cmp    QWORD PTR [rip+0x2014c8],0x0        # 601df0 <__JCR_END__>
+  400927:	00 
+  400928:	74 1e                	je     400948 <frame_dummy+0x28>
+  40092a:	b8 00 00 00 00       	mov    eax,0x0
+  40092f:	48 85 c0             	test   rax,rax
+  400932:	74 14                	je     400948 <frame_dummy+0x28>
+  400934:	55                   	push   rbp
+  400935:	bf f0 1d 60 00       	mov    edi,0x601df0
+  40093a:	48 89 e5             	mov    rbp,rsp
+  40093d:	ff d0                	call   rax
+  40093f:	5d                   	pop    rbp
+  400940:	e9 7b ff ff ff       	jmp    4008c0 <register_tm_clones>
+  400945:	0f 1f 00             	nop    DWORD PTR [rax]
+  400948:	e9 73 ff ff ff       	jmp    4008c0 <register_tm_clones>
+
+000000000040094d <_Z3geni>:
+  40094d:	55                   	push   rbp
+  40094e:	48 89 e5             	mov    rbp,rsp
+  400951:	48 83 ec 20          	sub    rsp,0x20
+  400955:	89 7d ec             	mov    DWORD PTR [rbp-0x14],edi
+  400958:	b8 16 00 00 00       	mov    eax,0x16
+  40095d:	48 89 c7             	mov    rdi,rax
+  400960:	e8 8b fe ff ff       	call   4007f0 <malloc@plt>
+  400965:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+  400969:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  40096d:	c6 00 79             	mov    BYTE PTR [rax],0x79
+  400970:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400974:	48 8d 70 01          	lea    rsi,[rax+0x1]
+  400978:	8b 4d ec             	mov    ecx,DWORD PTR [rbp-0x14]
+  40097b:	ba 93 24 49 92       	mov    edx,0x92492493
+  400980:	89 c8                	mov    eax,ecx
+  400982:	f7 ea                	imul   edx
+  400984:	8d 04 0a             	lea    eax,[rdx+rcx*1]
+  400987:	c1 f8 02             	sar    eax,0x2
+  40098a:	89 c2                	mov    edx,eax
+  40098c:	89 c8                	mov    eax,ecx
+  40098e:	c1 f8 1f             	sar    eax,0x1f
+  400991:	29 c2                	sub    edx,eax
+  400993:	89 d0                	mov    eax,edx
+  400995:	c1 e0 03             	shl    eax,0x3
+  400998:	29 d0                	sub    eax,edx
+  40099a:	29 c1                	sub    ecx,eax
+  40099c:	89 ca                	mov    edx,ecx
+  40099e:	89 d0                	mov    eax,edx
+  4009a0:	83 c0 30             	add    eax,0x30
+  4009a3:	88 06                	mov    BYTE PTR [rsi],al
+  4009a5:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  4009a9:	48 8d 50 02          	lea    rdx,[rax+0x2]
+  4009ad:	8b 45 ec             	mov    eax,DWORD PTR [rbp-0x14]
+  4009b0:	83 c0 3c             	add    eax,0x3c
+  4009b3:	88 02                	mov    BYTE PTR [rdx],al
+  4009b5:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  4009b9:	48 83 c0 03          	add    rax,0x3
+  4009bd:	c6 00 5f             	mov    BYTE PTR [rax],0x5f
+  4009c0:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  4009c4:	48 8d 50 04          	lea    rdx,[rax+0x4]
+  4009c8:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  4009cc:	48 83 c0 02          	add    rax,0x2
+  4009d0:	0f b6 00             	movzx  eax,BYTE PTR [rax]
+  4009d3:	83 e8 14             	sub    eax,0x14
+  4009d6:	88 02                	mov    BYTE PTR [rdx],al
+  4009d8:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  4009dc:	48 8d 50 05          	lea    rdx,[rax+0x5]
+  4009e0:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  4009e4:	48 83 c0 04          	add    rax,0x4
+  4009e8:	0f b6 00             	movzx  eax,BYTE PTR [rax]
+  4009eb:	83 c0 03             	add    eax,0x3
+  4009ee:	88 02                	mov    BYTE PTR [rdx],al
+  4009f0:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  4009f4:	48 8d 50 06          	lea    rdx,[rax+0x6]
+  4009f8:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  4009fc:	0f b6 40 05          	movzx  eax,BYTE PTR [rax+0x5]
+  400a00:	88 02                	mov    BYTE PTR [rdx],al
+  400a02:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a06:	48 83 c0 07          	add    rax,0x7
+  400a0a:	c6 00 65             	mov    BYTE PTR [rax],0x65
+  400a0d:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a11:	48 8d 50 08          	lea    rdx,[rax+0x8]
+  400a15:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a19:	0f b6 40 06          	movzx  eax,BYTE PTR [rax+0x6]
+  400a1d:	88 02                	mov    BYTE PTR [rdx],al
+  400a1f:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a23:	48 8d 50 09          	lea    rdx,[rax+0x9]
+  400a27:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a2b:	0f b6 40 03          	movzx  eax,BYTE PTR [rax+0x3]
+  400a2f:	88 02                	mov    BYTE PTR [rdx],al
+  400a31:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a35:	48 83 c0 0a          	add    rax,0xa
+  400a39:	c6 00 74             	mov    BYTE PTR [rax],0x74
+  400a3c:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a40:	48 8d 50 0b          	lea    rdx,[rax+0xb]
+  400a44:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a48:	48 83 c0 0a          	add    rax,0xa
+  400a4c:	0f b6 00             	movzx  eax,BYTE PTR [rax]
+  400a4f:	83 e8 0c             	sub    eax,0xc
+  400a52:	88 02                	mov    BYTE PTR [rdx],al
+  400a54:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a58:	48 83 c0 0c          	add    rax,0xc
+  400a5c:	c6 00 72             	mov    BYTE PTR [rax],0x72
+  400a5f:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a63:	48 83 c0 0d          	add    rax,0xd
+  400a67:	c6 00 33             	mov    BYTE PTR [rax],0x33
+  400a6a:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a6e:	48 83 c0 0e          	add    rax,0xe
+  400a72:	c6 00 33             	mov    BYTE PTR [rax],0x33
+  400a75:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a79:	48 8d 50 0f          	lea    rdx,[rax+0xf]
+  400a7d:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a81:	0f b6 40 03          	movzx  eax,BYTE PTR [rax+0x3]
+  400a85:	88 02                	mov    BYTE PTR [rdx],al
+  400a87:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a8b:	48 83 c0 10          	add    rax,0x10
+  400a8f:	c6 00 6e             	mov    BYTE PTR [rax],0x6e
+  400a92:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a96:	48 8d 50 11          	lea    rdx,[rax+0x11]
+  400a9a:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400a9e:	0f b6 40 02          	movzx  eax,BYTE PTR [rax+0x2]
+  400aa2:	88 02                	mov    BYTE PTR [rdx],al
+  400aa4:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400aa8:	48 8d 50 12          	lea    rdx,[rax+0x12]
+  400aac:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400ab0:	48 83 c0 10          	add    rax,0x10
+  400ab4:	0f b6 00             	movzx  eax,BYTE PTR [rax]
+  400ab7:	83 e8 01             	sub    eax,0x1
+  400aba:	88 02                	mov    BYTE PTR [rdx],al
+  400abc:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400ac0:	48 83 c0 13          	add    rax,0x13
+  400ac4:	c6 00 73             	mov    BYTE PTR [rax],0x73
+  400ac7:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400acb:	48 83 c0 14          	add    rax,0x14
+  400acf:	c6 00 21             	mov    BYTE PTR [rax],0x21
+  400ad2:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400ad6:	48 83 c0 15          	add    rax,0x15
+  400ada:	c6 00 0a             	mov    BYTE PTR [rax],0xa
+  400add:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400ae1:	c9                   	leave  
+  400ae2:	c3                   	ret    
+
+0000000000400ae3 <_Z9print_ptrPc>:
+  400ae3:	55                   	push   rbp
+  400ae4:	48 89 e5             	mov    rbp,rsp
+  400ae7:	48 83 ec 20          	sub    rsp,0x20
+  400aeb:	48 89 7d e8          	mov    QWORD PTR [rbp-0x18],rdi
+  400aef:	c7 45 fc 00 00 00 00 	mov    DWORD PTR [rbp-0x4],0x0
+  400af6:	eb 1e                	jmp    400b16 <_Z9print_ptrPc+0x33>
+  400af8:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+  400afb:	48 63 d0             	movsxd rdx,eax
+  400afe:	48 8b 45 e8          	mov    rax,QWORD PTR [rbp-0x18]
+  400b02:	48 01 d0             	add    rax,rdx
+  400b05:	0f b6 00             	movzx  eax,BYTE PTR [rax]
+  400b08:	0f be c0             	movsx  eax,al
+  400b0b:	89 c7                	mov    edi,eax
+  400b0d:	e8 be fc ff ff       	call   4007d0 <putchar@plt>
+  400b12:	83 45 fc 01          	add    DWORD PTR [rbp-0x4],0x1
+  400b16:	83 7d fc 14          	cmp    DWORD PTR [rbp-0x4],0x14
+  400b1a:	7e dc                	jle    400af8 <_Z9print_ptrPc+0x15>
+  400b1c:	c9                   	leave  
+  400b1d:	c3                   	ret    
+
+0000000000400b1e <main>:
+  400b1e:	55                   	push   rbp
+  400b1f:	48 89 e5             	mov    rbp,rsp
+  400b22:	48 83 ec 20          	sub    rsp,0x20
+  400b26:	c7 45 f4 00 00 00 00 	mov    DWORD PTR [rbp-0xc],0x0
+  400b2d:	c7 45 f0 00 00 00 00 	mov    DWORD PTR [rbp-0x10],0x0
+  400b34:	c7 45 ec 00 00 00 00 	mov    DWORD PTR [rbp-0x14],0x0
+  400b3b:	be d0 0c 40 00       	mov    esi,0x400cd0
+  400b40:	bf a0 21 60 00       	mov    edi,0x6021a0
+  400b45:	e8 e6 fc ff ff       	call   400830 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+  400b4a:	48 8d 45 f4          	lea    rax,[rbp-0xc]
+  400b4e:	48 89 c6             	mov    rsi,rax
+  400b51:	bf 80 20 60 00       	mov    edi,0x602080
+  400b56:	e8 f5 fc ff ff       	call   400850 <_ZNSirsERi@plt>
+  400b5b:	48 8d 55 f0          	lea    rdx,[rbp-0x10]
+  400b5f:	48 89 d6             	mov    rsi,rdx
+  400b62:	48 89 c7             	mov    rdi,rax
+  400b65:	e8 e6 fc ff ff       	call   400850 <_ZNSirsERi@plt>
+  400b6a:	48 8d 55 ec          	lea    rdx,[rbp-0x14]
+  400b6e:	48 89 d6             	mov    rsi,rdx
+  400b71:	48 89 c7             	mov    rdi,rax
+  400b74:	e8 d7 fc ff ff       	call   400850 <_ZNSirsERi@plt>
+  400b79:	8b 55 f4             	mov    edx,DWORD PTR [rbp-0xc]
+  400b7c:	8b 45 f0             	mov    eax,DWORD PTR [rbp-0x10]
+  400b7f:	01 c2                	add    edx,eax
+  400b81:	8b 45 ec             	mov    eax,DWORD PTR [rbp-0x14]
+  400b84:	01 d0                	add    eax,edx
+  400b86:	89 c7                	mov    edi,eax
+  400b88:	e8 c0 fd ff ff       	call   40094d <_Z3geni>
+  400b8d:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+  400b91:	8b 55 f4             	mov    edx,DWORD PTR [rbp-0xc]
+  400b94:	8b 45 f0             	mov    eax,DWORD PTR [rbp-0x10]
+  400b97:	01 c2                	add    edx,eax
+  400b99:	8b 45 ec             	mov    eax,DWORD PTR [rbp-0x14]
+  400b9c:	01 d0                	add    eax,edx
+  400b9e:	3d 39 05 00 00       	cmp    eax,0x539
+  400ba3:	75 27                	jne    400bcc <main+0xae>
+  400ba5:	be e6 0c 40 00       	mov    esi,0x400ce6
+  400baa:	bf a0 21 60 00       	mov    edi,0x6021a0
+  400baf:	e8 7c fc ff ff       	call   400830 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+  400bb4:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400bb8:	48 89 c7             	mov    rdi,rax
+  400bbb:	e8 23 ff ff ff       	call   400ae3 <_Z9print_ptrPc>
+  400bc0:	bf ef 0c 40 00       	mov    edi,0x400cef
+  400bc5:	e8 f6 fb ff ff       	call   4007c0 <puts@plt>
+  400bca:	eb 0f                	jmp    400bdb <main+0xbd>
+  400bcc:	be f1 0c 40 00       	mov    esi,0x400cf1
+  400bd1:	bf a0 21 60 00       	mov    edi,0x6021a0
+  400bd6:	e8 55 fc ff ff       	call   400830 <_ZStlsISt11char_traitsIcEERSt13basic_ostreamIcT_ES5_PKc@plt>
+  400bdb:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+  400bdf:	48 89 c7             	mov    rdi,rax
+  400be2:	e8 59 fc ff ff       	call   400840 <free@plt>
+  400be7:	b8 00 00 00 00       	mov    eax,0x0
+  400bec:	c9                   	leave  
+  400bed:	c3                   	ret    
+
+0000000000400bee <_Z41__static_initialization_and_destruction_0ii>:
+  400bee:	55                   	push   rbp
+  400bef:	48 89 e5             	mov    rbp,rsp
+  400bf2:	48 83 ec 10          	sub    rsp,0x10
+  400bf6:	89 7d fc             	mov    DWORD PTR [rbp-0x4],edi
+  400bf9:	89 75 f8             	mov    DWORD PTR [rbp-0x8],esi
+  400bfc:	83 7d fc 01          	cmp    DWORD PTR [rbp-0x4],0x1
+  400c00:	75 27                	jne    400c29 <_Z41__static_initialization_and_destruction_0ii+0x3b>
+  400c02:	81 7d f8 ff ff 00 00 	cmp    DWORD PTR [rbp-0x8],0xffff
+  400c09:	75 1e                	jne    400c29 <_Z41__static_initialization_and_destruction_0ii+0x3b>
+  400c0b:	bf b1 22 60 00       	mov    edi,0x6022b1
+  400c10:	e8 cb fb ff ff       	call   4007e0 <_ZNSt8ios_base4InitC1Ev@plt>
+  400c15:	ba c8 0c 40 00       	mov    edx,0x400cc8
+  400c1a:	be b1 22 60 00       	mov    esi,0x6022b1
+  400c1f:	bf 20 08 40 00       	mov    edi,0x400820
+  400c24:	e8 e7 fb ff ff       	call   400810 <__cxa_atexit@plt>
+  400c29:	c9                   	leave  
+  400c2a:	c3                   	ret    
+
+0000000000400c2b <_GLOBAL__sub_I__Z3geni>:
+  400c2b:	55                   	push   rbp
+  400c2c:	48 89 e5             	mov    rbp,rsp
+  400c2f:	be ff ff 00 00       	mov    esi,0xffff
+  400c34:	bf 01 00 00 00       	mov    edi,0x1
+  400c39:	e8 b0 ff ff ff       	call   400bee <_Z41__static_initialization_and_destruction_0ii>
+  400c3e:	5d                   	pop    rbp
+  400c3f:	c3                   	ret    
+
+0000000000400c40 <__libc_csu_init>:
+  400c40:	41 57                	push   r15
+  400c42:	41 89 ff             	mov    r15d,edi
+  400c45:	41 56                	push   r14
+  400c47:	49 89 f6             	mov    r14,rsi
+  400c4a:	41 55                	push   r13
+  400c4c:	49 89 d5             	mov    r13,rdx
+  400c4f:	41 54                	push   r12
+  400c51:	4c 8d 25 80 11 20 00 	lea    r12,[rip+0x201180]        # 601dd8 <__frame_dummy_init_array_entry>
+  400c58:	55                   	push   rbp
+  400c59:	48 8d 2d 88 11 20 00 	lea    rbp,[rip+0x201188]        # 601de8 <__init_array_end>
+  400c60:	53                   	push   rbx
+  400c61:	4c 29 e5             	sub    rbp,r12
+  400c64:	31 db                	xor    ebx,ebx
+  400c66:	48 c1 fd 03          	sar    rbp,0x3
+  400c6a:	48 83 ec 08          	sub    rsp,0x8
+  400c6e:	e8 05 fb ff ff       	call   400778 <_init>
+  400c73:	48 85 ed             	test   rbp,rbp
+  400c76:	74 1e                	je     400c96 <__libc_csu_init+0x56>
+  400c78:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+  400c7f:	00 
+  400c80:	4c 89 ea             	mov    rdx,r13
+  400c83:	4c 89 f6             	mov    rsi,r14
+  400c86:	44 89 ff             	mov    edi,r15d
+  400c89:	41 ff 14 dc          	call   QWORD PTR [r12+rbx*8]
+  400c8d:	48 83 c3 01          	add    rbx,0x1
+  400c91:	48 39 eb             	cmp    rbx,rbp
+  400c94:	75 ea                	jne    400c80 <__libc_csu_init+0x40>
+  400c96:	48 83 c4 08          	add    rsp,0x8
+  400c9a:	5b                   	pop    rbx
+  400c9b:	5d                   	pop    rbp
+  400c9c:	41 5c                	pop    r12
+  400c9e:	41 5d                	pop    r13
+  400ca0:	41 5e                	pop    r14
+  400ca2:	41 5f                	pop    r15
+  400ca4:	c3                   	ret    
+  400ca5:	90                   	nop
+  400ca6:	66 2e 0f 1f 84 00 00 	nop    WORD PTR cs:[rax+rax*1+0x0]
+  400cad:	00 00 00 
+
+0000000000400cb0 <__libc_csu_fini>:
+  400cb0:	f3 c3                	repz ret 
+
+Disassembly of section .fini:
+
+0000000000400cb4 <_fini>:
+  400cb4:	48 83 ec 08          	sub    rsp,0x8
+  400cb8:	48 83 c4 08          	add    rsp,0x8
+  400cbc:	c3                   	ret    
