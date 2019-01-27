@@ -1,5 +1,5 @@
 
-./leakless:     file format elf32-i386
+leakless:     file format elf32-i386
 
 
 Disassembly of section .init:
@@ -12,14 +12,14 @@ Disassembly of section .init:
  804839b:	8b 83 f4 ff ff ff    	mov    eax,DWORD PTR [ebx-0xc]
  80483a1:	85 c0                	test   eax,eax
  80483a3:	74 05                	je     80483aa <_init+0x1e>
- 80483a5:	e8 86 00 00 00       	call   8048430 <setvbuf@plt+0x10>
+ 80483a5:	e8 86 00 00 00       	call   8048430 <__gmon_start__@plt>
  80483aa:	83 c4 08             	add    esp,0x8
  80483ad:	5b                   	pop    ebx
  80483ae:	c3                   	ret    
 
 Disassembly of section .plt:
 
-080483b0 <read@plt-0x10>:
+080483b0 <.plt>:
  80483b0:	ff 35 04 a0 04 08    	push   DWORD PTR ds:0x804a004
  80483b6:	ff 25 08 a0 04 08    	jmp    DWORD PTR ds:0x804a008
  80483bc:	00 00                	add    BYTE PTR [eax],al
@@ -28,41 +28,41 @@ Disassembly of section .plt:
 080483c0 <read@plt>:
  80483c0:	ff 25 0c a0 04 08    	jmp    DWORD PTR ds:0x804a00c
  80483c6:	68 00 00 00 00       	push   0x0
- 80483cb:	e9 e0 ff ff ff       	jmp    80483b0 <_init+0x24>
+ 80483cb:	e9 e0 ff ff ff       	jmp    80483b0 <.plt>
 
 080483d0 <signal@plt>:
  80483d0:	ff 25 10 a0 04 08    	jmp    DWORD PTR ds:0x804a010
  80483d6:	68 08 00 00 00       	push   0x8
- 80483db:	e9 d0 ff ff ff       	jmp    80483b0 <_init+0x24>
+ 80483db:	e9 d0 ff ff ff       	jmp    80483b0 <.plt>
 
-080483e0 <alarm@plt>:
+080483e0 <isnan@plt>:
  80483e0:	ff 25 14 a0 04 08    	jmp    DWORD PTR ds:0x804a014
  80483e6:	68 10 00 00 00       	push   0x10
- 80483eb:	e9 c0 ff ff ff       	jmp    80483b0 <_init+0x24>
+ 80483eb:	e9 c0 ff ff ff       	jmp    80483b0 <.plt>
 
 080483f0 <puts@plt>:
  80483f0:	ff 25 18 a0 04 08    	jmp    DWORD PTR ds:0x804a018
  80483f6:	68 18 00 00 00       	push   0x18
- 80483fb:	e9 b0 ff ff ff       	jmp    80483b0 <_init+0x24>
+ 80483fb:	e9 b0 ff ff ff       	jmp    80483b0 <.plt>
 
 08048400 <exit@plt>:
  8048400:	ff 25 1c a0 04 08    	jmp    DWORD PTR ds:0x804a01c
  8048406:	68 20 00 00 00       	push   0x20
- 804840b:	e9 a0 ff ff ff       	jmp    80483b0 <_init+0x24>
+ 804840b:	e9 a0 ff ff ff       	jmp    80483b0 <.plt>
 
 08048410 <__libc_start_main@plt>:
  8048410:	ff 25 20 a0 04 08    	jmp    DWORD PTR ds:0x804a020
  8048416:	68 28 00 00 00       	push   0x28
- 804841b:	e9 90 ff ff ff       	jmp    80483b0 <_init+0x24>
+ 804841b:	e9 90 ff ff ff       	jmp    80483b0 <.plt>
 
 08048420 <setvbuf@plt>:
  8048420:	ff 25 24 a0 04 08    	jmp    DWORD PTR ds:0x804a024
  8048426:	68 30 00 00 00       	push   0x30
- 804842b:	e9 80 ff ff ff       	jmp    80483b0 <_init+0x24>
+ 804842b:	e9 80 ff ff ff       	jmp    80483b0 <.plt>
 
 Disassembly of section .plt.got:
 
-08048430 <.plt.got>:
+08048430 <__gmon_start__@plt>:
  8048430:	ff 25 f4 9f 04 08    	jmp    DWORD PTR ds:0x8049ff4
  8048436:	66 90                	xchg   ax,ax
 
@@ -215,7 +215,7 @@ Disassembly of section .text:
  80485b5:	83 c4 10             	add    esp,0x10
  80485b8:	83 ec 0c             	sub    esp,0xc
  80485bb:	6a 78                	push   0x78
- 80485bd:	e8 1e fe ff ff       	call   80483e0 <alarm@plt>
+ 80485bd:	e8 1e fe ff ff       	call   80483e0 <isnan@plt>
  80485c2:	83 c4 10             	add    esp,0x10
  80485c5:	90                   	nop
  80485c6:	8b 5d fc             	mov    ebx,DWORD PTR [ebp-0x4]
